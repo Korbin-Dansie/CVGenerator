@@ -4,7 +4,7 @@ from .models import Profile
 # Create your views here.
 def accept_view(request):
     if request.method == "POST":
-            name = request.POST.get('name', '')
+            name = request.POST.get('name')
             email = request.POST.get('email', '')
             phone = request.POST.get('phone', '')
             summary = request.POST.get('summary', '')
