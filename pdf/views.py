@@ -17,3 +17,8 @@ def accept_view(request):
                                 previous_work=previous_work, skills=skills)
             profile.save()
     return render(request, 'pdf/accept.html')
+
+def resume_view(request, id):
+        user_profile = Profile.objects.get(pk=id)
+        return render(request, 'pdf/resume.html', {'user_profile': user_profile})
+      
